@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Збалансоване харчування</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles-result.css') }}">
+</head>
+
+<body class="is-preload">
+
+    <!-- Header -->
+    <section id="header">
+        <header>
+            <span class="image avatar"><img src="{{ url_for('static', filename='styles/images/avatar1.jpg') }}"
+                    alt="" /></span>
+            <h1 id="logo"><a href="#">Микита Молошнюк</a></h1>
+            <p>Студент 3КН-20Б</p>
+        </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="#method">Корисна інформація</a></li>
+            </ul>
+        </nav>
+        
+    </section>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Banner -->
+            <section id="about">
+                <div class="image main" data-position="center">
+                    <img src="{{ url_for('static', filename='styles/images/banner.jpg') }}" alt="" />
+                </div>
+            </section>
+
+
+            <!-- Канкулятор -->
+            <section id="accomplishments">
+                <div class="container">
+                    <div class="flex">
+                        <div id="triangle" class="triangle down">
+                        </div>
+                        <h3 id="methodology-toggle" onclick="toggleMethodology()">Корисна інформація:</h3>
+                    </div>
+
+                    <div id="methodology-content" class="methodology-content">
+                        <p><a href="https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html"
+                                target="_blank">BMI | Індекс маси тіла</a><a
+                                href="https://apollo.online/blog-post/yak-rozrahuvaty-svij-bazovyj-metabolizm-formula-harrisa-benedykta/#:~:text=%D0%90%20%D0%B1%D0%B0%D0%B7%D0%B0%D0%BB%D1%8C%D0%BD%D1%96%D0%B9%20%D0%BC%D0%B5%D1%82%D0%B0%D0%B1%D0%BE%D0%BB%D1%96%D0%B7%D0%BC%20(BMR)%20%E2%80%93,%D0%B2%D0%BE%D0%BD%D0%BE%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B1%D1%83%D0%B2%D0%B0%D1%94%20%D1%83%20%D1%81%D1%82%D0%B0%D0%BD%D1%96%20%D1%81%D0%BF%D0%BE%D0%BA%D0%BE%D1%8E."><sup>[1]</sup></a>-
+                            це величина, що дозволяє оцінити ступінь відповідності маси людини та її зросту.
+                        </p>
+                        <p><a href="https://bcaa.ua/ua/podderzhka/bazalniy_metabolizm_chto_eto_i_kak_ego_rasschitat"
+                                target="_blank">BMR | Базальний метаболізм<a
+                                    href="https://www.bmi-calculator.net/bmr-calculator/"
+                                    target="_blank"><sup>[2]</sup></a></a> - це кількість енергії, яка потрібна для
+                            нормалізації функціоування вашого тіла. В залежножні від вашого віку, росту та ваги
+                            базальний
+                            метаболізм може суттєво відрізнятися між людьми. Чим більше ваша маса тіла, тим вище буде
+                            ваш
+                            БМ, оскільки для підтримки більшої кількості тканин та клітин потрібно більше енергії. </p>
+                        <p>BFM | Жирова тканина<a href="https://www.fatcalc.com/bf" target="_blank"><sup>[3]</sup></a> - це кількість
+                            жирової тканини в організмі у відсотках. У цьому пункті програма видаватиме коментарі:
+                            "Недостатня вага", "Здорова вага", "Ожиріння" та "Надмірна вага".</p>
+                        </br>
+                        <!-- Після отримання показників -->
+                        <section id="parameters">
+                            <p>Отримавши показники з калькулятора, ми отримаємо наступні параметри:
+                            </p>
+                            </br>
+                            <p><span class="bold-result">Білок</span> - це будівельний матеріал, який відіграє важливу
+                                роль у відновлені та росту
+                                тканин, такі як м'язи, шкіра та кістки. Основним джерелом білка є будь-які види м'яса та
+                                молочні продукти, проте високий вміст білка можна знайти і в бобових, грибах, горіхах,
+                                насінні та цільно зернових крупах і навіть в деяких овочах.</p>
+                            <p><span class="bold-result">Вуглеводи</span> - це паливо нашого організма. Поділяються на
+                                2 категорії: прості та комплесні вуглеводи. До простих вуглеводів відносять моносахариди і дисахариди
+                                (фруктоза і глюкоза)<sup><a
+                                        href="https://mrvegan.com.ua/blog/vidi_i_dzherela_vuglevodiv#:~:text=%D0%94%D0%BE%20%D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%B8%D1%85%20%D0%B2%D1%83%D0%B3%D0%BB%D0%B5%D0%B2%D0%BE%D0%B4%D1%96%D0%B2%20%D0%B2%D1%96%D0%B4%D0%BD%D0%BE%D1%81%D1%8F%D1%82%D1%8C%20%D0%BC%D0%BE%D0%BD%D0%BE%D1%81%D0%B0%D1%85%D0%B0%D1%80%D0%B8%D0%B4%D0%B8,%D1%96%D0%BD%D1%81%D1%83%D0%BB%D1%96%D0%BD%D1%83%2C%20%D1%8F%D0%BA%D0%B8%D0%B9%20%D0%BF%D0%BE%D0%B2%D0%B8%D0%BD%D0%B5%D0%BD%20%D1%97%D1%97%20%D0%BD%D0%B5%D0%B9%D1%82%D1%80%D0%B0%D0%BB%D1%96%D0%B7%D1%83%D0%B2%D0%B0%D1%82%D0%B8.">[5]</a></sup></p>
+                            <p><span class="bold-result">Сердцебиття</span> - це динамічний показник під час тренувань<a
+                                href="https://uihc.org/health-topics/target-heart-rate-exercise#:~:text=Your%20target%20heart%20rate%20is,220%20and%20subtract%20your%20age."><sup>[4]</sup></a>.</p>
+                            <!-- <ol class="parameter-list">
+                                <li>авіаів</li>
+                                </ul>
+                                </p>
+                                </li>
+                                <li></li>
+                            </ol> -->
+                            
+                        </section>
+                    </div>
+
+                    <div class="features">
+                        <article>
+                            <div class="inner">
+                                <div id="results">
+                                    <!-- Результат -->
+                                    <h3>Результат:</h3>
+                                    <div class="container-calculate">
+                                        <p>BMI | Індекс маси тіла: <span class="bold-result">{{ bmi }}</span></p>
+                                        <p>BMR | Базальний метаболізм: <span class="bold-result">{{ bmr }}
+                                                калорій</span></p>
+                                        <p>BFM | Жирова прошарка: <span class="bold-result">{{ bmi_category }}</span></p>
+                                        <p>Потрібно випити води: <span class="bold-result">{{ water_total }} мл</span>
+                                        </p>
+                                        <p>Потрібно спожити білків: <span class="bold-result">{{ protein }}
+                                                грамів</span></p>
+                                        <p>Потрібно спожити вуглеводів: <span class="bold-result">{{ carbs }}
+                                                грамів</span></p>
+                                        <p>Цільова частота серцевих скорочень під час тренування: <span
+                                                class="bold-result">{{
+                                                heart_rate }} уд/хв</span></p>
+                                    </div>
+                                    <button onclick="goToIndex()" type="submit">Головна сторінка</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Footer -->
+        <section id="footer">
+            <div class="container">
+                <ul class="copyright">
+                    <li>&copy; Untitled. All rights reserved.</li>
+                    <li>Design: <a href="">Student 3KN-20B</a></a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <!-- Scripts -->
+    <script>
+
+        function goToIndex() {
+            window.location.href = "/";
+        }
+
+        // Отримуємо всі посилання для відкривання списків
+        const toggleLinks = document.querySelectorAll('#method .toggle-list');
+
+        // Додаємо обробник події для кожного посилання
+        toggleLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                // Забороняємо дійу за замовчуванням
+                event.preventDefault();
+
+                // Отримуємо список, який потрібно переключати
+                const list = this.nextElementSibling;
+
+                // Перемикаємо видимість списку
+                list.classList.toggle('hidden');
+            });
+        });
+
+        // Корисна інформація
+        function toggleMethodology() {
+            var content = document.getElementById("methodology-content");
+
+            // Перевіряємо, чи елемент прихований
+            if (content.style.maxHeight) {
+                // Якщо видимий, приховуємо його
+                content.style.maxHeight = null;
+            } else {
+                // Якщо прихований, робимо видимим
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        }
+
+        // Анімація трикутника
+        function toggleMethodology() {
+            var content = document.getElementById("methodology-content");
+            var triangle = document.getElementById("triangle");
+
+            // Перевіряємо, чи елемент прихований
+            if (content.style.maxHeight) {
+                // Якщо видимий, приховуємо його
+                content.style.maxHeight = null;
+                triangle.classList.remove("up");
+                triangle.classList.add("down");
+            } else {
+                // Якщо прихований, робимо видимим
+                content.style.maxHeight = content.scrollHeight + "px";
+                triangle.classList.remove("down");
+                triangle.classList.add("up");
+            }
+        }
+    </script>
+</body>
+
+</html>

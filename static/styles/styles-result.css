@@ -1,0 +1,778 @@
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic|Source+Code+Pro:400");
+
+
+/* Онулення */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+	blockquote:before, blockquote:after, q:before, q:after {
+		content: '';
+		content: none;
+	}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	-webkit-text-size-adjust: none;
+}
+
+mark {
+	background-color: transparent;
+	color: inherit;
+}
+
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input, select, textarea {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+}
+
+/* Basic */
+
+	html {
+		box-sizing: border-box;
+	}
+
+	*, *:before, *:after {
+		box-sizing: inherit;
+	}
+
+	body {
+		background: #fff;
+	}
+
+	body, input, select, textarea {
+		color: #888;
+		font-family: "Lato", sans-serif;
+		font-size: 15pt;
+		font-weight: 400;
+		line-height: 1.6em;
+	}
+/* Wilis corto upper */
+	a {
+		/* border-bottom: solid 1px #e4e4e4; */
+		color: inherit;
+		text-decoration: none;
+	}
+
+		a:hover {
+			border-bottom-color: transparent;
+			color: #4acaa8 !important;
+		}
+
+
+	p {
+		margin: 0 0 0.25em 0;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: #777;
+		font-weight: 700;
+		line-height: 1em;
+		
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+    a {
+        border: 0;
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+	h2 {
+		font-size: 2em;
+		line-height: 1.5em;
+	}
+
+	h3 {
+		font-size: 1.75em;
+		line-height: 1.5em;
+	}
+
+	h4 {
+		font-size: 1.25em;
+		line-height: 1.5em;
+	}
+
+	h5 {
+		font-size: 0.9em;
+		line-height: 1.5em;
+	}
+
+	h6 {
+		font-size: 0.7em;
+		line-height: 1.5em;
+	}
+
+	sub {
+		font-size: 0.8em;
+		position: relative;
+		top: 0.5em;
+	}
+
+	sup {
+		font-size: 0.8em;
+		position: relative;
+		top: -0.5em;
+	}
+
+	hr {
+		border: 0;
+		border-bottom: solid 2px #f4f4f4;
+		margin: 2.25em 0;
+	}
+
+		hr.major {
+			margin: 3.375em 0;
+		}
+
+	blockquote {
+		border-left: solid 8px #e4e4e4;
+		font-style: italic;
+		margin: 0 0 0.25em 0;
+		padding: 0.5em 0 0.5em 2em;
+	}
+
+	code {
+		background: #555;
+		border-radius: 5px;
+		color: #fff;
+		font-family: "Source Code Pro", monospace;
+		font-size: 0.9em;
+		margin: 0 0.25em;
+		padding: 0.25em 0.65em;
+	}
+
+	pre {
+		font-family: "Source Code Pro", monospace;
+		font-size: 0.9em;
+		margin: 0 0 2.25em 0;
+	}
+
+		pre code {
+			-webkit-overflow-scrolling: touch;
+			display: block;
+			line-height: 1.5em;
+			overflow-x: auto;
+			padding: 1em 1.5em;
+		}
+
+	.align-left {
+		text-align: left;
+	}
+
+	.align-center {
+		text-align: center;
+	}
+
+	.align-right {
+		text-align: right;
+	}
+
+
+/* Box */
+
+/* Icon (insta, facebook...)*/
+
+	.icon {
+		text-decoration: none;
+		border-bottom: none;
+		position: relative;
+	}
+
+		.icon:before {
+			display: inline-block;
+			font-style: normal;
+			font-variant: normal;
+			text-rendering: auto;
+			line-height: 1;
+			text-transform: none !important;
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 400;
+		}
+
+		.icon > .label {
+			display: none;
+		}
+
+		.icon:before {
+			line-height: inherit;
+		}
+
+		.icon.solid:before {
+			font-weight: 900;
+		}
+
+		.icon.brands:before {
+			font-family: 'Font Awesome 5 Brands';
+		}
+
+/* Background-Image */
+
+	.image {
+		border-radius: 5px;
+		border: 0;
+		display: inline-block;
+		position: relative;
+	}
+
+		.image[data-position] img {
+			-moz-object-fit: cover;
+			-webkit-object-fit: cover;
+			-ms-object-fit: cover;
+			object-fit: cover;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		.image[data-position="top left"] img {
+			-moz-object-position: top left;
+			-webkit-object-position: top left;
+			-ms-object-position: top left;
+			object-position: top left;
+		}
+
+		.image[data-position="top"] img {
+			-moz-object-position: top;
+			-webkit-object-position: top;
+			-ms-object-position: top;
+			object-position: top;
+		}
+
+		.image[data-position="top right"] img {
+			-moz-object-position: top right;
+			-webkit-object-position: top right;
+			-ms-object-position: top right;
+			object-position: top right;
+		}
+
+		.image[data-position="right"] img {
+			-moz-object-position: right;
+			-webkit-object-position: right;
+			-ms-object-position: right;
+			object-position: right;
+		}
+
+		.image[data-position="bottom right"] img {
+			-moz-object-position: bottom right;
+			-webkit-object-position: bottom right;
+			-ms-object-position: bottom right;
+			object-position: bottom right;
+		}
+
+		.image[data-position="bottom"] img {
+			-moz-object-position: bottom;
+			-webkit-object-position: bottom;
+			-ms-object-position: bottom;
+			object-position: bottom;
+		}
+
+		.image[data-position="bottom left"] img {
+			-moz-object-position: bottom left;
+			-webkit-object-position: bottom left;
+			-ms-object-position: bottom left;
+			object-position: bottom left;
+		}
+
+		.image[data-position="left"] img {
+			-moz-object-position: left;
+			-webkit-object-position: left;
+			-ms-object-position: left;
+			object-position: left;
+		}
+
+		.image[data-position="center"] img {
+			-moz-object-position: center;
+			-webkit-object-position: center;
+			-ms-object-position: center;
+			object-position: center;
+		}
+
+		.image[data-position="25% 25%"] img {
+			-moz-object-position: 25% 25%;
+			-webkit-object-position: 25% 25%;
+			-ms-object-position: 25% 25%;
+			object-position: 25% 25%;
+		}
+
+		.image[data-position="75% 25%"] img {
+			-moz-object-position: 75% 25%;
+			-webkit-object-position: 75% 25%;
+			-ms-object-position: 75% 25%;
+			object-position: 75% 25%;
+		}
+
+		.image[data-position="75% 75%"] img {
+			-moz-object-position: 75% 75%;
+			-webkit-object-position: 75% 75%;
+			-ms-object-position: 75% 75%;
+			object-position: 75% 75%;
+		}
+
+		.image[data-position="25% 75%"] img {
+			-moz-object-position: 25% 75%;
+			-webkit-object-position: 25% 75%;
+			-ms-object-position: 25% 75%;
+			object-position: 25% 75%;
+		}
+
+		.image img {
+			border-radius: 5px;
+			display: block;
+		}
+
+		.image.left {
+			float: left;
+			margin: 0 2.5em 2em 0;
+			top: 0.25em;
+		}
+
+		.image.right {
+			float: right;
+			margin: 0 0 2em 2.5em;
+			top: 0.25em;
+		}
+
+		.image.fit {
+			display: block;
+			margin: 0 0 2.25em 0;
+			width: 100%;
+		}
+
+			.image.fit img {
+				display: block;
+				width: 100%;
+			}
+
+		.image.avatar {
+			border-radius: 100%;
+			overflow: hidden;
+		}
+
+			.image.avatar img {
+				border-radius: 100%;
+				display: block;
+				width: 100%;
+			}
+
+		.image.main {
+			display: block;
+			height: 20em;
+			border-radius: 0;
+		}
+
+			.image.main img {
+				border-radius: 0;
+			}
+
+/* Main Icons (Things I can do)*/
+
+	ul.feature-icons {
+		list-style: none;
+		padding-left: 0;
+	}
+
+		ul.feature-icons li {
+			text-decoration: none;
+			display: inline-block;
+			margin: 0 0 1.6875em 0;
+			padding: 0.35em 0 0 3.5em;
+			position: relative;
+			vertical-align: top;
+			width: 48%;
+		}
+
+			ul.feature-icons li:before {
+				-moz-osx-font-smoothing: grayscale;
+				-webkit-font-smoothing: antialiased;
+				display: inline-block;
+				font-style: normal;
+				font-variant: normal;
+				text-rendering: auto;
+				line-height: 1;
+				text-transform: none !important;
+				font-family: 'Font Awesome 5 Free';
+				font-weight: 400;
+			}
+
+			ul.feature-icons li:before {
+				background: #5c9649;
+				border-radius: 100%;
+				color: #ffffff;
+				display: block;
+				height: 2.5em;
+				left: 0;
+				line-height: 2.5em;
+				position: absolute;
+				text-align: center;
+				top: 0;
+				width: 2.5em;
+			}
+
+/* Social-header-list  */
+
+	ul.icons {
+		cursor: default;
+		list-style: none;
+		padding-left: 0;
+	}
+
+		ul.icons li {
+			display: inline-block;
+			padding: 0 1em 0 0;
+		}
+
+			ul.icons li:last-child {
+				padding-right: 0 !important;
+			}
+
+			ul.icons li .icon:before {
+				font-size: 1.25em;
+			}
+
+
+/* Що я вмію? (list) */
+
+	.features article {
+		border-top: solid 3px #f4f4f4;
+		margin-bottom: 2.25em;
+		padding-top: 2.25em;
+	}
+
+		.features article:first-child {
+			border-top: 0;
+			padding-top: 0;
+		}
+
+		.features article .image {
+			display: inline-block;
+			padding-right: 2.5em;
+			vertical-align: middle;
+			width: 40%;
+		}
+
+			.features article .image img {
+				display: block;
+				width: 100%;
+			}
+
+		.features article .inner {
+			display: inline-block;
+			vertical-align: middle;
+			width: 50%;
+		}
+
+			.features article .inner > :last-child {
+				margin-bottom: 0;
+			}
+			
+			
+/* Питання */
+.container-form {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.questions {
+	/* flex: 1; */
+	padding-right: 20px;
+	
+}
+
+.input-form {
+	/* flex: 1; */
+	width: 25%;
+}
+
+label {
+	display: block;
+	margin: 0 auto;
+	/* margin-bottom: 1%; */
+	line-height: 2.1em;
+}
+
+input[type="text"],
+select {
+	width: 140%; 
+	margin-bottom: 4px;
+	border-radius: 10px;
+	text-align: justify;
+}
+
+button[type="submit"] {
+	display: block;
+	margin: 0 auto;
+	padding: 10px 20px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 15pt;
+}
+
+.bold-result {
+	font-weight: bold;
+}
+
+/* Header */
+
+	#header {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-direction: column;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-moz-justify-content: space-between;
+		-webkit-justify-content: space-between;
+		-ms-justify-content: space-between;
+		justify-content: space-between;
+		background: #5c9649;
+		color: #d2f2e9;
+		height: 100%;
+		overflow-y: auto;
+		position: fixed;
+		text-align: center;
+		top: 0;
+		width: 23em;
+		right: 0;
+	}
+
+		#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
+			color: #ffffff;
+		}
+
+			#header h1 a, #header h2 a, #header h3 a, #header h4 a, #header h5 a, #header h6 a {
+				color: #ffffff;
+			}
+
+		#header a {
+			color: #171a19;
+		}
+
+			#header a:hover {
+				color: #ffffff !important;
+			}
+
+		#header > header {
+			-moz-flex-shrink: 0;
+			-webkit-flex-shrink: 0;
+			-ms-flex-shrink: 0;
+			flex-shrink: 0;
+			padding: 3em;
+		}
+
+			#header > header .avatar {
+				display: block;
+				margin: 0 auto 2.25em auto;
+				width: 8em;
+			}
+
+			#header > header h1 {
+				font-size: 1.75em;
+				margin: 0;
+			}
+
+			#header > header p {
+				color: #fff;
+				font-style: italic;
+				margin: 1em 0 0 0;
+			}
+
+		#header > footer {
+			-moz-flex-shrink: 0;
+			-webkit-flex-shrink: 0;
+			-ms-flex-shrink: 0;
+			flex-shrink: 0;
+			bottom: 0;
+			left: 0;
+			padding: 2em;
+			width: 100%;
+		}
+
+			#header > footer .icons {
+				margin: 0;
+			}
+
+				#header > footer .icons li a {
+					color: #fff;
+				}
+
+		#header > nav {
+			-moz-flex-grow: 1;
+			-webkit-flex-grow: 1;
+			-ms-flex-grow: 1;
+			flex-grow: 1;
+		}
+
+			#header > nav ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+				#header > nav ul li {
+					/* border-top: solid 2px #fff; */
+					display: block;
+					padding: 0;
+				}
+
+					#header > nav ul li a {
+						-moz-transition: none;
+						-webkit-transition: none;
+						-ms-transition: none;
+						transition: none;
+						border: 0;
+						color: #ffffff !important;
+						display: block;
+						padding: 0.85em 0;
+						text-decoration: none;
+					}
+
+					#header > nav ul li:first-child {
+						border-top: 0;
+					}
+
+/* Wrapper (Line between blocks) */
+
+	#wrapper {
+		background: #fff;
+		padding-right: 23em;
+	}
+
+/* Main */
+
+	#main > section {
+		border-top: solid 6px #f4f4f4;
+	}
+
+		#main > section > .container {
+			padding: 2em 1em 4em 4em;
+		}
+
+		#main > section:first-child {
+			border-top: 0;
+		}
+
+/* Footer */
+
+	#footer {
+		/* background: #fafafa; */
+		background:#5c9649;
+		border-top: 0;
+		color: #fff;
+		overflow: hidden;
+		padding: 4em 0 2em 0;
+	}
+
+		#footer .copyright {
+			line-height: 1em;
+			list-style: none;
+			padding: 0 0 0 4em;
+		}
+
+			#footer .copyright li {
+				border-left: solid 1px #d4d4d4;
+				display: inline-block;
+				font-size: 0.8em;
+				margin-left: 1em;
+				padding-left: 1em;
+			}
+
+				#footer .copyright li:first-child {
+					border-left: 0;
+					margin-left: 0;
+					padding-left: 0;
+				}
+
+				#footer .copyright li a {
+					color: inherit;
+				}
+
+				
+				.container-calculate{
+					width: 180%;
+				}
+				
+				/* Стилі для списку параметрів */
+.parameter-list {
+    list-style-type: none; /* Вимкнення типу маркера */
+    padding-left: 20px; /* Відступ для точок */
+}
+
+.parameter-list li::before {
+    content: "\2022"; /* Код символу "•" - це кругла точка */
+		font-size: 20px;
+		margin-left: 20px;
+    color: #5c9649; /* Колір точок */
+    display: inline-block;
+    width: 1em; /* Ширина символу */
+    margin-left: -1em; /* Зміщення точки вліво */
+}
+/* Анімація відкриття\закриття "Методичка" */
+#methodology-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease-out;
+}
+
+.methodology-content.active {
+	max-height: 1000px; 
+}
+
+
+/* Трикутник */
+.triangle {
+	width: 0;
+	height: 0;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid black;
+	transition: transform 0.3s ease-in-out;
+	transform: rotate(90deg);
+}
+
+.up {
+	transform: rotate(180deg);
+}
+
+.flex{
+	display: flex;
+	align-items: center;
+}
+

@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Збалансоване харчування</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
+</head>
+
+<body class="is-preload">
+
+    <!-- Header -->
+    <section id="header">
+        <header>
+            <span class="image avatar"><img src="{{ url_for('static', filename='styles/images/avatar1.jpg') }}"
+                    alt="" /></span>
+            <h1 id="logo"><a href="#">Микита Молошнюк</a></h1>
+            <p>Студент 3КН-20б</p>
+        </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="#about" class="active">Коротко про себе</a></li>
+                <li><a href="#things">Що я вмію?</a></li>
+                <li><a href="#accomplishments">Калькулятор</a></li>
+            </ul>
+        </nav>
+        
+    </section>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Banner -->
+            <section id="about">
+                <div class="image main" data-position="center">
+                    <img src="{{ url_for('static', filename='styles/images/banner.jpg') }}" alt="" />
+                </div>
+                <div class="container">
+                    <header class="major">
+                        <h2>Коротко про себе</h2>
+                        <p>Привіт усім! Я студент четвертого курсу групи 3КН-20б  факультету інтелектуальних
+                            інформаційних технологій та автоматизації. Пропоную програмний продукт "Збалансоване харчування", який допоможе
+                            визначити ваш індекс маси тіла, базальний метаболізм та жировий прошарок. Ці параметри ваги
+                            є важливими для розуміння вашого здоров'я та потреб у правильному харчуванні. Використання цього
+                            продукту дозволить вам зосередитися на тих аспектах харчування, які відповідають вашим
+                            потребам.</p>
+                    </header>
+                </div>
+            </section>
+
+            <!-- Що я вмію ?o -->
+            <section id="things">
+                <div class="container">
+                    <h3>Що я вмію?</h3>
+                    <p>Пункт призначений для ознайомлення кожного пукнта, якщо щось буде не зрозумілим.</p>
+                    <ul class="feature-icons">
+                        <li class="fa-solid fa-star">Індекс маси тіла</li>
+                        <li class="fa-regular fa-star">Білки</li>
+                        <li class="fa-regular fa-star">Базальний метаболізм</li>
+                        <li class="fa-regular fa-star">Вуглеводи</li>
+                        <li class="fa-regular fa-star">Жировий прошарок</li>
+                        <li class="fa-regular fa-star">Серцебиття</li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Калькулятора -->
+            <section id="accomplishments">
+                <div class="container">
+                    <h3>Калькулятор</h3>
+                    <p>Після ведення показників буде сформований результат досліджень. Якщо буде щось не зрозузілим в "інформація" є роз'яснення.</p>
+                    <div class="features">
+                        <!-- First Form -->
+                        <article>
+                            <div class="inner">
+                                <form action="/" method="post">
+                                    <div class="container-form">
+                                        <div class="questions">
+                                            <!-- <label for="unit_chosen">Використовуємо метричні одиниці?</label> -->
+                                            <label for="age">Вік:</label>
+                                            <label for="gender">
+                                                <span class="tooltip">Стать*
+                                                    <span class="tooltiptext_2">
+                                                    M | Ч , W | Ж</span>
+                                                </span></label>
+                                            <label for="height"><span class="tooltip">Зріст *
+                                                <span class="tooltiptext_2">
+                                                У сантиметрах</span>
+                                            </span></label>
+                                            <label for="weight">
+                                                <span class="tooltip">Вага *
+                                                    <span class="tooltiptext_2">
+                                                    У кілограмах</span>
+                                                </span></label>
+                                            <label for="sport_per_day">Скільки годин на день ви займаєтесь
+                                                спортом?</label>
+                                            <label for="goal_chosen">Ваша мета?</label>
+                                            <p>Оберіть ваш рівень 
+                                                <span class="tooltip">активності *
+                                                    <span class="tooltiptext">
+                                                    Мається на увазі скільки днів ви плануєте займатись: <br/>Жодна активність: 0-1 д Легка активність: 2-3 д Середня активність: 4-5 д Висока активність: 6-7 д</span>
+                                                </span>:
+                                            </p>
+                                        </div>
+                                        <div class="input-form">
+                                            <!-- <input type="text" id="unit_chosen" name="unit_chosen"> -->
+                                            <input type="text" id="age" name="age">
+                                            <input type="text" id="gender" name="gender">
+                                            <input type="text" id="height" name="height">
+                                            <input type="text" id="weight" name="weight">
+                                            <input type="text" id="sport_per_day" name="sport_per_day">
+                                            <select id="goal_chosen" name="goal_chosen">
+                                                <option value="1">Нарощування м'язів</option>
+                                                <option value="2">Підвищення витривалості</option>
+                                                <option value="3">Збалансоване харчування</option>
+                                            </select>
+                                            <select id="activity_level" name="activity_level">
+                                                <option value="1">Жодна активність</option>
+                                                <option value="2">Легка активність</option>
+                                                <option value="3">Середня активність</option>
+                                                <option value="4" aria-setsize="20">Велика активність</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <input type="submit" value="Розрахувати">
+                                </form>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Footer -->
+        <section id="footer">
+            <div class="container">
+                <ul class="copyright">
+                    <li>&copy; Untitled. All rights reserved.</li>
+                    <li>Design: <a href="">Student 3KN-20B</a></a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <!-- Scripts -->
+</body>
+</html>
