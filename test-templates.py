@@ -18,7 +18,7 @@ def calculate_results(request_form):
 
     bmi = w / (h ** 2)
 
-    water_base = w * 35
+    water_base = w * 30
     sport_hours = float(sport_per_day)
     water_from_sport = sport_hours * 750
     water_total = water_base + water_from_sport
